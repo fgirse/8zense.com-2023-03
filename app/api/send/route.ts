@@ -1,24 +1,26 @@
-import { NEXT_URL } from 'next/dist/client/components/app-router-headers';
-import EmailTemplate  from '@/components/email/ContactUsForm';
-import {Resend} from 'resend';
+import { Resend } from "resend";
+import { NextRequest, NextResponse } from "next/server";
+import EmailMessage from "@/app/api/emails/EmailMessage";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST() {
-  try {
-    const { data, error } = await resend.emails.send({
-      from: "Fernanda <sender info@8zense.com>",
-      to: "${formData.email}",
-      subject: 'Ihre Nachricht',
-      text: "Sehr geehrte Frau/ Herr ${'{firstname}'",
-    });
+export async function POST(req:NextRequest) {
+    const {firstName,lastName,mobileNumber,email,message} = await req.json();
 
-    if (error) {
-      return Response.json({ error }, { status: 500 });
+    try{
+        const data = await resend.emails.send({
+          from: 'Theresa <onboarding@resend.dev>', //your verified domain
+            to  : email, //the email address you want to send a message 
+            subject : 'Ihre Anfrage', //email subject
+            react : EmailMessage({firstName,lastName,mobileNumber,email,message})
+        })
+
+        return NextResponse.json(data)
+          } catch(error) {
+          console.log(error)
     }
-
-    return Response.json(data);
-  } catch (error) {
-    return Response.json({ error }, { status: 500 });
-  }
 }
+
+
+
+      

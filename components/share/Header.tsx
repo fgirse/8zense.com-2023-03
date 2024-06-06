@@ -10,7 +10,7 @@ import { PropsWithChildren } from "react";
 
 const Header = () => {
   return (
-    <header className="flex flex-col lg:h-20 text-white items-center justify-between bg-transparent">
+    <header className="flex flex-col lg:h-20 text-white items-center justify-between bg-neutral-700">
       <div
         id=""
         className="bg-neutral-600 w-[100-vw] h-20 flex flex-row items-center justify-between 

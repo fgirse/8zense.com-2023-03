@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
@@ -7,13 +7,13 @@ import { ErrorMessage } from "@hookform/error-message"
 type FormInput = {
     firstName : string;
     lastName : string;
-    //age : number;
+    age : number;
     mobileNumber : string;
     email : string;
-    //doctor : string;
+    doctor : string;
     date : string;
     time : string;
-    //gender : string;
+    gender : string;
     message : string;
     agree : string;
 }
@@ -36,13 +36,13 @@ export default function ContactUsForm() {
           body : JSON.stringify({
             firstName : formData.firstName,
             lastName : formData.lastName,
-            //age : formData.age,
+            age : formData.age,
             mobileNumber : formData.mobileNumber,
             email : formData.email,
-            //doctor : formData.doctor,
+            doctor : formData.doctor,
             date : formData.date,
             time : formData.time,
-            //gender : formData.gender,
+            gender : formData.gender,
             message : formData.message,
             agree : formData.agree
           })
@@ -76,13 +76,13 @@ export default function ContactUsForm() {
           </div>
         </div>
 
-        {/*<div className="sm:col-span-3">
+        <div className="sm:col-span-3">
           <label className="block text-start text-sm font-medium leading-6 text-gray-900">Age</label>
           <div className="mt-2">
             <input type="number"  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
             {...register('age',{required:true,min:1,max:99})}/>
           </div>
-  </div>*/}
+        </div>
 
         <div className="sm:col-span-3">
           <label className="block text-start text-sm font-medium leading-6 text-gray-900">Mobile number</label>
@@ -100,7 +100,7 @@ export default function ContactUsForm() {
           </div>
         </div>
 
-        {/*<div className="sm:col-span-3">
+        <div className="sm:col-span-3">
           <label className="block text-sm text-start font-medium leading-6 text-gray-900">Doctor</label>
           <div className="mt-2">
             <select  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"  {...register("doctor", { required: true })}>
@@ -110,29 +110,29 @@ export default function ContactUsForm() {
               <option value="dr-lee">Dr. Michael Lee</option>
             </select>
           </div>
-</div>*/}
+        </div>
 
-        {/*<div className="sm:col-span-3">
+        <div className="sm:col-span-3">
           <label className="block text-start text-sm font-medium leading-6 text-gray-900">Date</label>
           <div className="mt-2">
             <input type="date" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
             {...register("date", {required: true})}/>
           </div>
-</div>*/}
+        </div>
 
-        {/*<div className="sm:col-span-3">
+        <div className="sm:col-span-3">
           <label className="block text-start text-sm font-medium leading-6 text-gray-900">Time</label>
           <div className="mt-2">
             <input type="time"  autoComplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
              {...register("time", {required: true})}/>
           </div>
-</div>*/}
+        </div>
 
       </div>
 
       <div className="border-b border-gray-900/10 pb-8">
         <div className="space-y-10">
-          {/*<fieldset>
+          <fieldset>
             <div className="flex gap-5">
             <label className="block text-sm font-medium leading-6 text-gray-900">Gender</label>
               <div className="flex items-center gap-x-3">
@@ -144,7 +144,7 @@ export default function ContactUsForm() {
                 <label className="block text-sm  leading-6 text-gray-900">Female</label>
               </div>
             </div>
-</fieldset>*/}
+          </fieldset>
         </div>
       
 
@@ -172,7 +172,7 @@ export default function ContactUsForm() {
     </div>
 
     <div className="mt-6 flex items-center ">
-      <button type="submit" className="rounded-md bg-lime-300 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Schedule Appointment</button>
+      <button type="submit" className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Schedule Appointment</button>
     </div>
   </form>
   )

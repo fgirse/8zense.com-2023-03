@@ -147,7 +147,7 @@ export default function Navbar() {
         </div>
         {/* navitems */}
       </section>
-      <Link href="/auth/user-profile" className="text-sm text-lime-300">
+      <Link href="/(root)/user-profile/route" className="text-sm text-lime-300">
       <button className="ml-3 mr-3 first-letter: w-24 py-1 px-2 border-2 rborder-1 rounded-xl h-fit text-lime-300 transition-all hover:bg-zenseSignal2/90">
           My Profile
         </button>
