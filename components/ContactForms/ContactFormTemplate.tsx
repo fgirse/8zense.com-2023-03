@@ -5,5 +5,5 @@ type ContactFormTemplateProps = {
 export default function ContactFormTemplate({
   message,
 }: ContactFormTemplateProps) {
-  return <div style={{ whiteSpace: 'pre-line' }}>{message}</div>;
+  return <div style={{ whiteSpace: "pre-line" }}>{message}</div>;
 }

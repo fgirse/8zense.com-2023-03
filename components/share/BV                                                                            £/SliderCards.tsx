@@ -12,16 +12,16 @@ interface CardProps {
 }
 
 const SliderCards: React.FC<{ cards: CardProps[] }> = ({ cards }) => {
-  return cards.map(({ id, text, name ,vorname, funktion, image, }) => (
-   <>
-   <div className="flex flex-row items-center justify-center">
-    <div className="w-60 h-auto">
-    <Image src={image} key={id} alt="" width={150} height={150}/>
-    </div>    
-      <span>{name}</span>
-      <span>{vorname}</span>
-      <span>{funktion}</span>
-      <span>{text}</span>
+  return cards.map(({ id, text, name, vorname, funktion, image }) => (
+    <>
+      <div className="flex flex-row items-center justify-center">
+        <div className="h-auto w-60">
+          <Image src={image} key={id} alt="" width={150} height={150} />
+        </div>
+        <span>{name}</span>
+        <span>{vorname}</span>
+        <span>{funktion}</span>
+        <span>{text}</span>
       </div>
     </>
   ));

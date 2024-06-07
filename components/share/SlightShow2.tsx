@@ -29,16 +29,16 @@ const Slider = () => {
     };
   }, [activeImage]);
   return (
-    <main className="grid grid-cols place-items-center md:grid-cols-2  w-full mx-auto max-w-5xl shadow-2xl rounded-2xl">
+    <main className="grid-cols mx-auto grid w-full max-w-5xl place-items-center rounded-2xl shadow-2xl md:grid-cols-2">
       <div
-        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+        className={`flex w-full items-center justify-center gap-4 p-6 transition-transform duration-500 ease-in-out md:rounded-2xl md:p-0`}
       >
         {images.map((elem, idx) => (
           <div
             key={idx}
             className={`${
               idx === activeImage
-                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                ? "block h-[80vh] w-full object-cover transition-all duration-500 ease-in-out"
                 : "hidden"
             }`}
           >
@@ -46,10 +46,8 @@ const Slider = () => {
               src={elem.src}
               alt="Portrait Testemonial"
               width="200"
-             height="200"
-            
-             
-              className="w-full h-60 object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+              height="200"
+              className="h-60 w-full object-cover md:rounded-bl-3xl md:rounded-tl-3xl"
             />
           </div>
         ))}

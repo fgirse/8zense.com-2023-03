@@ -71,4 +71,4 @@ export const getSinglePage = (folder: string) => {
   return filterByDate;
 };
 
-export default getListPage
+export default getListPage;

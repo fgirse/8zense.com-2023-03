@@ -17,7 +17,12 @@ const items: MenuProps["items"] = [
   {
     key: "2",
     label: (
-      <Link className=""     target="_blank" rel="noopener noreferrer" href="#section-datenSchutz">
+      <Link
+        className=""
+        target="_blank"
+        rel="noopener noreferrer"
+        href="#section-datenSchutz"
+      >
         Datenschutz
       </Link>
     ),
@@ -33,11 +38,7 @@ const items: MenuProps["items"] = [
   {
     key: "4",
     label: (
-      <Link
-        target="_blank"
-        rel="noopener noreferrer"
-        href="#section-sideMap"
-      >
+      <Link target="_blank" rel="noopener noreferrer" href="#section-sideMap">
         Side Map
       </Link>
     ),
@@ -46,13 +47,13 @@ const items: MenuProps["items"] = [
 
 const App: React.FC = () => (
   <Dropdown
-    className="ml-5 hover:border rounded-xl px-2 py-1  hover:bg-slate-500 text-4xl text-zenseWhite font-sans font-black uppercase lg:text-2xl xl:text-3xl"
+    className="ml-5 rounded-xl px-2 py-1 font-sans text-4xl font-black uppercase text-zenseWhite hover:border hover:bg-slate-500 lg:text-2xl xl:text-3xl"
     menu={{ items }}
   >
     <a onClick={(e) => e.preventDefault()}>
       <Space>
         Impressum{" "}
-        <DownOutlined className="bg-slate-900 text-white text-lg uppercase" />
+        <DownOutlined className="bg-slate-900 text-lg uppercase text-white" />
       </Space>
     </a>
   </Dropdown>

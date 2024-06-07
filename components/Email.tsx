@@ -31,22 +31,22 @@ const ContactMeEmail = ({
       <Head />
       <Preview>{previewText}</Preview>
       <Tailwind>
-        <Body className="bg-white my-auto mx-auto font-sans">
-          <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
-            <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
+        <Body className="mx-auto my-auto bg-white font-sans">
+          <Container className="mx-auto my-[40px] w-[465px] rounded border border-solid border-[#eaeaea] p-[20px]">
+            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
               <strong>{name}</strong> would like to contact you about something!
             </Heading>
 
-            <Text className="text-black text-[14px] leading-[24px]">
+            <Text className="text-[14px] leading-[24px] text-black">
               Here is the message:
             </Text>
 
-            <Text className="text-black text-[14px] leading-[24px]">
+            <Text className="text-[14px] leading-[24px] text-black">
               {content}
             </Text>
 
-            <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
-            <Text className="text-[#666666] text-[12px] leading-[24px]">
+            <Hr className="mx-0 my-[26px] w-full border border-solid border-[#eaeaea]" />
+            <Text className="text-[12px] leading-[24px] text-[#666666]">
               This message was sent by {name}. You can contact him through his
               email {emailAddress} or his phone number {phoneNumber}
             </Text>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useRef } from "react";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
@@ -21,7 +21,6 @@ export default function Home() {
           id="firstLottie"
           ref={ref}
           autoplay
-          
           loop
           mode="normal"
           src="https://assets4.lottiefiles.com/packages/lf20_gb5bmwlm.json"

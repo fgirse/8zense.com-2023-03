@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const VanishText = () => {
   return (
-    <div className=" px-4 py-24 text-center md:py-36">
+    <div className="px-4 py-24 text-center md:py-36">
       <h3 className="text-3xl font-medium text-zenseGrey sm:text-4xl md:text-5xl lg:text-6xl">
         Das sagen unsere Kunden:
         <AnimatedText
@@ -39,7 +39,7 @@ const AnimatedText = ({ phrases }: { phrases: string[] }) => {
   }, [phrases]);
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-4 text">
+    <div className="text flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-4">
       <AnimatePresence mode="popLayout">
         {phrases[active].split(" ").map((word, wordIndex) => {
           if (wordIndex === 0) {
@@ -47,7 +47,10 @@ const AnimatedText = ({ phrases }: { phrases: string[] }) => {
           }
 
           return (
-            <motion.div key={word} className="whitespace-nowrap text-zenseSignal2">
+            <motion.div
+              key={word}
+              className="whitespace-nowrap text-zenseSignal2"
+            >
               {word.split("").map((letter, letterIndex) => {
                 const content = (
                   <motion.span
@@ -83,4 +86,3 @@ const AnimatedText = ({ phrases }: { phrases: string[] }) => {
     </div>
   );
 };
-

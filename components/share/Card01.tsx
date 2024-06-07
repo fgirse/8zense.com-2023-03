@@ -5,95 +5,99 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import Image from "next/image"
-import Avatar from "@/public/assets/images/avatar-sm-bardot.png"
+} from "@/components/ui/card";
+import Image from "next/image";
+import Avatar from "@/public/assets/images/avatar-sm-bardot.png";
 
 export default function ProductCard() {
   return (
-    <div className=" mx-auto my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="mx-auto my-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {/* Product Card 1 */}
-      <Card className="bg-white max-w-sm rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+      <Card className="max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition duration-300 hover:shadow-lg">
         <CardHeader className="relative">
-          <Image src={Avatar} alt="Portrait Bardot" sizes="100vw" style={{width:'30%',height: 'auto',}}/>
-          <div className="absolute top-0 left-0 bg-gradient-to-r from-zenseSignal2 to-orange-200 p-2 text-white">
+          <Image
+            src={Avatar}
+            alt="Portrait Bardot"
+            sizes="100vw"
+            style={{ width: "30%", height: "auto" }}
+          />
+          <div className="absolute left-0 top-0 bg-gradient-to-r from-zenseSignal2 to-orange-200 p-2 text-white">
             Testimonials
           </div>
         </CardHeader>
         <CardContent className="p-4">
-          <CardTitle className="text-xl font-semibold mb-2">
+          <CardTitle className="mb-2 text-xl font-semibold">
             Brigitte Bardot
           </CardTitle>
-          <CardDescription className="text-gray-600 mb-4">
+          <CardDescription className="mb-4 text-gray-600">
             Schauspielerin
           </CardDescription>
-          <p className="text-gray-700 mb-2">$99.99</p>
+          <p className="mb-2 text-gray-700">$99.99</p>
         </CardContent>
-        <CardFooter className="p-4 bg-gray-100">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded-full">
+        <CardFooter className="bg-gray-100 p-4">
+          <button className="rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
             Add to Cart
           </button>
         </CardFooter>
       </Card>
 
       {/* Product Card 2 */}
-      <Card className="bg-white max-w-sm rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+      <Card className="max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition duration-300 hover:shadow-lg">
         <CardHeader className="relative">
           <img
             src="/watch.png"
             alt="Product Image"
-            className="w-full h-48 bg-contain bg-center"
+            className="h-48 w-full bg-contain bg-center"
           />
-          <div className="absolute top-0 left-0 bg-gradient-to-r from-blue-500 to-purple-500 p-2 text-white">
+          <div className="absolute left-0 top-0 bg-gradient-to-r from-blue-500 to-purple-500 p-2 text-white">
             New Arrival
           </div>
         </CardHeader>
         <CardContent className="p-4">
-          <CardTitle className="text-xl font-semibold mb-2">
+          <CardTitle className="mb-2 text-xl font-semibold">
             Product Title
           </CardTitle>
-          <CardDescription className="text-gray-600 mb-4">
+          <CardDescription className="mb-4 text-gray-600">
             Product Description goes here. Provide a brief overview of the
             product.
           </CardDescription>
-          <p className="text-gray-700 mb-2">$99.99</p>
+          <p className="mb-2 text-gray-700">$99.99</p>
         </CardContent>
-        <CardFooter className="p-4 bg-gray-100">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded-full">
+        <CardFooter className="bg-gray-100 p-4">
+          <button className="rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
             Add to Cart
           </button>
         </CardFooter>
       </Card>
 
       {/* Product Card 3 */}
-      <Card className="bg-white max-w-sm rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+      <Card className="max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition duration-300 hover:shadow-lg">
         <CardHeader className="relative">
           <img
             src="/watch.png"
             alt="Product Image"
-            className="w-full h-48 bg-contain bg-center"
+            className="h-48 w-full bg-contain bg-center"
           />
-          <div className="absolute top-0 left-0 bg-gradient-to-r from-blue-500 to-purple-500 p-2 text-white">
+          <div className="absolute left-0 top-0 bg-gradient-to-r from-blue-500 to-purple-500 p-2 text-white">
             New Arrival
           </div>
         </CardHeader>
         <CardContent className="p-4">
-          <CardTitle className="text-xl font-semibold mb-2">
+          <CardTitle className="mb-2 text-xl font-semibold">
             Product Title
           </CardTitle>
-          <CardDescription className="text-gray-600 mb-4">
+          <CardDescription className="mb-4 text-gray-600">
             Product Description goes here. Provide a brief overview of the
             product.
           </CardDescription>
-          <p className="text-gray-700 mb-2"></p>
+          <p className="mb-2 text-gray-700"></p>
         </CardContent>
-        <CardFooter className="p-4 bg-gray-100">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded-full">
+        <CardFooter className="bg-gray-100 p-4">
+          <button className="rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
             Add to Cart
           </button>
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }
-

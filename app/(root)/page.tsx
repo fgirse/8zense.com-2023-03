@@ -61,14 +61,12 @@ export default function Home() {
       {/*====================================================grid start ===============*/}
 
       <section className={styles.section}>
-                <div className=" top-5vh">
-        
-            <Hero/>
-        </div> 
+        <div className="">
+          <Hero />
+        </div>
         <section className="">
-            <IntroWebside/>
-
-        </section>                                                                      
+          <IntroWebside />
+        </section>
       </section>
     </>
   );

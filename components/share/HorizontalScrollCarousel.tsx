@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
@@ -11,7 +11,9 @@ const Example = () => {
           Scroll down
         </span>
       </div>
-      <h1 className="text-center text-zenseWhite uppercase text-4xl md:6xl lg:text-[5.33rem]">Das Team</h1>
+      <h1 className="md:6xl text-center text-4xl uppercase text-zenseWhite lg:text-[5.33rem]">
+        Das Team
+      </h1>
       <HorizontalScrollCarousel />
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
@@ -55,71 +57,62 @@ const Card = ({ card }: { card: CardType }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="absolute tpooi inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+        className="tpooi absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      <div className="absolute top-[30vh] inset-0 z-10 grid place-content-center">
-        <p className=" leading-6 bg-gradient-to-br from-zenseSignal2/25 to-white/0 p-8 text-4xl font-black uppercase text-white ">
+      <div className="absolute inset-0 top-[30vh] z-10 grid place-content-center">
+        <p className="bg-gradient-to-br from-zenseSignal2/25 to-white/0 p-8 text-4xl font-black uppercase leading-6 text-white">
           {card.title}
-        <br/>
-        <span className="text-2xl">
-          {card.subtitle}
-        </span><br/>
-        <span className="text-lg leading-3 ">
-          {card.statement}
-        </span></p>
+          <br />
+          <span className="text-2xl">{card.subtitle}</span>
+          <br />
+          <span className="text-lg leading-3">{card.statement}</span>
+        </p>
       </div>
     </div>
   );
 };
 
-
-
-
 export default Example;
 
+type CardType = {
+  url: string;
+  title: string;
+  subtitle: string;
+  statement: string;
+  id: number;
+};
 
-  type CardType = {
-    url: string;
-    title: string;
-    subtitle: string;
-    statement: string;
-    id: number;
-  };
-  
-  const cards: CardType[] = [
-    {
-      url: '/assets/images/Portrait01.jpeg',
-      title: "Fernanda Pereira",
-      subtitle: "Founderin 8zense.com",
-      statement: "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
-      id: 1,
-    },
-    {
-      url: '/assets/images/Portrait02.jpeg',
-      title: "Fernanda Pereira",
-      subtitle: "Founderin 8zense.com",
-      statement: "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
-      id: 2,
-    },
-    {
-      url: '/assets/images/Portrait03.jpeg',
-      title: "Fernanda Pereira",
-      subtitle: "Founderin 8zense.com",
-      statement: "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
-      id: 3,
-    },
-    {
-      url: '/assets/images/Portrait04.jpeg',
-      title: "Fernanda Pereira",
-      subtitle: "Founderin 8zense.com",
-      statement: "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
-      id: 4,
-    },
-        
-  ]
-
-
-
-  
-
-
+const cards: CardType[] = [
+  {
+    url: "/assets/images/Portrait01.jpeg",
+    title: "Fernanda Pereira",
+    subtitle: "Founderin 8zense.com",
+    statement:
+      "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
+    id: 1,
+  },
+  {
+    url: "/assets/images/Portrait02.jpeg",
+    title: "Fernanda Pereira",
+    subtitle: "Founderin 8zense.com",
+    statement:
+      "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
+    id: 2,
+  },
+  {
+    url: "/assets/images/Portrait03.jpeg",
+    title: "Fernanda Pereira",
+    subtitle: "Founderin 8zense.com",
+    statement:
+      "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
+    id: 3,
+  },
+  {
+    url: "/assets/images/Portrait04.jpeg",
+    title: "Fernanda Pereira",
+    subtitle: "Founderin 8zense.com",
+    statement:
+      "<< 8zense.com ist das Fundament und die Basis für anspuchvolles Design >>",
+    id: 4,
+  },
+];

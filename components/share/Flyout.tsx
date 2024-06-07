@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -6,7 +6,7 @@ const Example = () => {
   return (
     <div className="flex h-[500px] justify-center bg-neutral-900 px-3 py-12">
       <FlyoutLink href="#" FlyoutContent={PricingContent}>
-      Impressum
+        Impressum
       </FlyoutLink>
     </div>
   );
@@ -29,7 +29,7 @@ const FlyoutLink = ({
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="relative w-fit h-fit bg-blue-500"
+      className="relative h-fit w-fit bg-blue-500"
     >
       <a href={href} className="relative text-white">
         {children}
@@ -91,4 +91,4 @@ const PricingContent = () => {
   );
 };
 
-export default Example
+export default Example;

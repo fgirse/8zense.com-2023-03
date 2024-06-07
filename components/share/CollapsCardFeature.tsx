@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
-import { Player } from '@lottiefiles/react-lottie-player';
+import { Player } from "@lottiefiles/react-lottie-player";
 import { useState } from "react";
 import { IconType } from "react-icons";
 import {
@@ -14,9 +14,8 @@ import {
   FiUpload,
 } from "react-icons/fi";
 import Image from "next/image";
-import NetWorking from'@/public/assets/images/networking.svg'
-import Quality from'@/public/assets/images/quality03.gif';
-
+import NetWorking from "@/public/assets/images/networking.svg";
+import Quality from "@/public/assets/images/quality03.gif";
 
 const CollapseCardFeatures = () => {
   const [position, setPosition] = useState(0);
@@ -91,12 +90,15 @@ const Feature = ({
         duration: 0.35,
       }}
       className={`relative flex min-h-[250px] w-10/12 max-w-lg shrink-0 flex-col justify-between overflow-hidden p-8 shadow-lg md:w-3/5 ${
-        index % 2 ? "bg-slate-900 text-white" : " bg-white"
+        index % 2 ? "bg-slate-900 text-white" : "bg-white"
       }`}
     >
-      
-      <div className="w-16 h-20 absolute right-4 top-2 text-7xl lg:w-36 lg:h-36"><Image src={icon} alt="" fill sizes="100vw"/></div>
-      <h3 className="mb-8 text-[1.66rem] font-bold lg:text-[2.33rem]">{title}</h3>
+      <div className="absolute right-4 top-2 h-20 w-16 text-7xl lg:h-36 lg:w-36">
+        <Image src={icon} alt="" fill sizes="100vw" />
+      </div>
+      <h3 className="mb-8 text-[1.66rem] font-bold lg:text-[2.33rem]">
+        {title}
+      </h3>
       <p>{description}</p>
     </motion.div>
   );
@@ -107,32 +109,31 @@ export default CollapseCardFeatures;
 const features = [
   {
     title: "Individualität",
-    icon:"/assets/images/Animation - 1713258701084.gif",
+    icon: "/assets/images/Animation - 1713258701084.gif",
     description:
-      "Individualität ist bei 8zense.com gross geschrieben. Jede unserer Beton-Compositionen ist ein Einzelstück!"  
+      "Individualität ist bei 8zense.com gross geschrieben. Jede unserer Beton-Compositionen ist ein Einzelstück!",
   },
   {
     title: "Networking",
-    icon:"/assets/images/networking03.gif",
+    icon: "/assets/images/networking03.gif",
     description:
       "Wir pflegen beste Verbindungen zu renommierten Architekten und Designern!",
   },
   {
     title: "Top Qualität",
-    icon:"/assets/images/qualität.gif",
+    icon: "/assets/images/qualität.gif",
     description:
       "Alle die von uns hergestellten Werkstücke sind handgefertigt! ",
   },
   {
     title: "Exklusiv",
-    icon:"/assets/images/exclusive.svg",
+    icon: "/assets/images/exclusive.svg",
     description:
       "8zense.com steht für klares Design, hohe Funktionalität und ausgezeichneter Material Qualität!",
   },
   {
     title: "Zeitlos",
-  icon:"/assets/icons/Zeituhrdark.svg",
-    description: "8zense.com Beton-Design ist zeitlos!"
-
+    icon: "/assets/icons/Zeituhrdark.svg",
+    description: "8zense.com Beton-Design ist zeitlos!",
   },
 ];

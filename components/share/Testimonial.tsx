@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Image from "next/image";
-import IlluTestimonial from"@/public/assets/images/illustration.png";
+import IlluTestimonial from "@/public/assets/images/illustration.png";
 
 const CARD_SIZE_LG = 365;
 const CARD_SIZE_SM = 290;
@@ -12,7 +12,7 @@ const CARD_SIZE_SM = 290;
 const BORDER_SIZE = 2;
 const CORNER_CLIP = 50;
 const CORNER_LINE_LEN = Math.sqrt(
-  CORNER_CLIP * CORNER_CLIP + CORNER_CLIP * CORNER_CLIP
+  CORNER_CLIP * CORNER_CLIP + CORNER_CLIP * CORNER_CLIP,
 );
 
 const ROTATE_DEG = 2.5;
@@ -136,70 +136,67 @@ const TestimonialCard = ({
 
   return (
     <>
-    
-
-    <motion.div
-      initial={false}
-      onClick={() => handleMove(position)}
-      className={`
-      absolute left-1/2 top-1/2 cursor-pointer border-black p-8 text-black transition-colors duration-500 ${
-        isActive ? "z-10 bg-zenseSignal2" : "z-0 bg-white"
-      }
-      `}
-      style={{
-        borderWidth: BORDER_SIZE,
-        clipPath: `polygon(${CORNER_CLIP}px 0%, calc(100% - ${CORNER_CLIP}px) 0%, 100% ${CORNER_CLIP}px, 100% 100%, calc(100% - ${CORNER_CLIP}px) 100%, ${CORNER_CLIP}px 100%, 0 100%, 0 0)`,
-      }}
-      animate={{
-        width: cardSize,
-        height: cardSize,
-        x: `calc(-50% + ${position * (cardSize / 1.5)}px)`,
-        y: `calc(-50% + ${
-          isActive ? CENTER_STAGGER : position % 2 ? STAGGER : -STAGGER
-        }px)`,
-        rotate: isActive ? 0 : position % 2 ? ROTATE_DEG : -ROTATE_DEG,
-        boxShadow: isActive ? "0px 8px 0px 4px black" : "0px 0px 0px 0px black",
-      }}
-      transition={{
-        type: "spring",
-        mass: 3,
-        stiffness: 400,
-        damping: 50,
-      }}
-    >
-       
-      <span
-        className="absolute block origin-top-right rotate-45 bg-black object-cover"
+      <motion.div
+        initial={false}
+        onClick={() => handleMove(position)}
+        className={`absolute left-1/2 top-1/2 cursor-pointer border-black p-8 text-black transition-colors duration-500 ${
+          isActive ? "z-10 bg-zenseSignal2" : "z-0 bg-white"
+        } `}
         style={{
-          right: -BORDER_SIZE,
-          top: CORNER_CLIP - BORDER_SIZE,
-          width: CORNER_LINE_LEN,
-          height: BORDER_SIZE,
+          borderWidth: BORDER_SIZE,
+          clipPath: `polygon(${CORNER_CLIP}px 0%, calc(100% - ${CORNER_CLIP}px) 0%, 100% ${CORNER_CLIP}px, 100% 100%, calc(100% - ${CORNER_CLIP}px) 100%, ${CORNER_CLIP}px 100%, 0 100%, 0 0)`,
         }}
-      />
-      <img
-        src={testimonial.imgSrc}
-        alt={`Testimonial image for ${testimonial.by}`}
-        className="mb-4 h-14 w-12 bg-neutral-600 object-cover object-top"
-        style={{
-          boxShadow: "3px 3px 0px white",
+        animate={{
+          width: cardSize,
+          height: cardSize,
+          x: `calc(-50% + ${position * (cardSize / 1.5)}px)`,
+          y: `calc(-50% + ${
+            isActive ? CENTER_STAGGER : position % 2 ? STAGGER : -STAGGER
+          }px)`,
+          rotate: isActive ? 0 : position % 2 ? ROTATE_DEG : -ROTATE_DEG,
+          boxShadow: isActive
+            ? "0px 8px 0px 4px black"
+            : "0px 0px 0px 0px black",
         }}
-      />
-      <h3
-        className={`text-base sm:text-xl ${
-          isActive ? "text-white" : "text-black"
-        }`}
+        transition={{
+          type: "spring",
+          mass: 3,
+          stiffness: 400,
+          damping: 50,
+        }}
       >
-        "{testimonial.testimonial}"
-      </h3>
-      <p
-        className={`absolute bottom-8 left-8 right-8 mt-2 text-sm italic ${
-          isActive ? "text-zenserCyan" : "text-neutral-700"
-        }`}
-      >
-        - {testimonial.by}
-      </p>
-    </motion.div>
+        <span
+          className="absolute block origin-top-right rotate-45 bg-black object-cover"
+          style={{
+            right: -BORDER_SIZE,
+            top: CORNER_CLIP - BORDER_SIZE,
+            width: CORNER_LINE_LEN,
+            height: BORDER_SIZE,
+          }}
+        />
+        <img
+          src={testimonial.imgSrc}
+          alt={`Testimonial image for ${testimonial.by}`}
+          className="mb-4 h-14 w-12 bg-neutral-600 object-cover object-top"
+          style={{
+            boxShadow: "3px 3px 0px white",
+          }}
+        />
+        <h3
+          className={`text-base sm:text-xl ${
+            isActive ? "text-white" : "text-black"
+          }`}
+        >
+          "{testimonial.testimonial}"
+        </h3>
+        <p
+          className={`absolute bottom-8 left-8 right-8 mt-2 text-sm italic ${
+            isActive ? "text-zenserCyan" : "text-neutral-700"
+          }`}
+        >
+          - {testimonial.by}
+        </p>
+      </motion.div>
     </>
   );
 };
@@ -221,8 +218,7 @@ const TESTIMONIAL_DATA: TestimonialType[] = [
   },
   {
     tempId: 1,
-    testimonial:
-      "I'm confident my regardness of good design is 8zense.com",
+    testimonial: "I'm confident my regardness of good design is 8zense.com",
     by: "Jean-Paul Belmondo 'Bebel',  Schauspieler",
     imgSrc: "/assets/images/avatar-sm-belmondo.png",
   },
@@ -258,7 +254,7 @@ const TESTIMONIAL_DATA: TestimonialType[] = [
     testimonial:
       "Took some convincing, but now that we're on 8zense.com, we're never going back.",
     by: "Claudia Cardinale, Schauspielerin",
-    imgSrc: "/assets/images/avatar-sm-cardinale.png"
+    imgSrc: "/assets/images/avatar-sm-cardinale.png",
   },
   {
     tempId: 7,
@@ -271,13 +267,14 @@ const TESTIMONIAL_DATA: TestimonialType[] = [
     tempId: 8,
     testimonial: "8zense.com is just the best. Period.",
     by: "Ronaldo, Football-PlayerCEO at CO",
-    imgSrc: "/assets/images/avatar-sm-ronaldo.png"
+    imgSrc: "/assets/images/avatar-sm-ronaldo.png",
   },
   {
     tempId: 9,
-    testimonial: "For good Design I switched 5 years ago to 8zense.com and never looked back.",
+    testimonial:
+      "For good Design I switched 5 years ago to 8zense.com and never looked back.",
     by: "Andy, Handball-Profi",
-    imgSrc: "/assets/images/avatar-sm-andi.png"
+    imgSrc: "/assets/images/avatar-sm-andi.png",
   },
   {
     tempId: 10,
@@ -291,6 +288,6 @@ const TESTIMONIAL_DATA: TestimonialType[] = [
     testimonial:
       "8zense.com is so awsome and intuitive - Fernanda is a fantastic designerin.",
     by: "Jean-Paul, Schauspieler",
-    imgSrc: "/assets/images/avatar-sm-belmondo.png"
+    imgSrc: "/assets/images/avatar-sm-belmondo.png",
   },
 ];

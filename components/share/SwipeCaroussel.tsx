@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
@@ -12,7 +12,6 @@ const imgs = [
   "/assets/images/avatar-sm-bardot.png",
   "/assets/images/avatar-sm-bardot.png",
   "/assets/images/avatar-sm-bardot.png",
-                
 ];
 
 const ONE_SECOND = 1000;
@@ -77,7 +76,6 @@ export const SwipeCarousel = () => {
         className="flex cursor-grab items-center active:cursor-grabbing"
       >
         <Images imgIndex={imgIndex} />
-
       </motion.div>
 
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
@@ -103,12 +101,10 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
             }}
             transition={SPRING_OPTIONS}
             className="aspect-video w-screen shrink-0 rounded-xl bg-neutral-800 object-cover"
-           
           />
         );
       })}
-          <h1 className="Test">Test</h1>
-
+      <h1 className="Test">Test</h1>
     </>
   );
 };

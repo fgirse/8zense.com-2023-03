@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
@@ -26,7 +26,7 @@ const ScrollToTop = () => {
     <div>
       {showScrollTopButton && (
         <FaAngleDoubleUp
-          className="ml-5 mb-5 fixed bottom-10  px-3 z-30 rounded-full bg-blue-500 h-12 w-12 text-white"
+          className="fixed bottom-10 z-30 mb-5 ml-5 h-12 w-12 rounded-full bg-blue-500 px-3 text-white"
           onClick={scrollTop}
         />
       )}

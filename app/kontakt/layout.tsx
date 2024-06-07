@@ -6,15 +6,14 @@ import styles from "./kontakt.module.css";
 export default function KontaktLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
-    <Header />
-    <main className={styles.main}>{children}</main>
+      <Header />
+      <main className={styles.main}>{children}</main>
 
-    <Footer />
-    
-  </>
-  )
+      <Footer />
+    </>
+  );
 }

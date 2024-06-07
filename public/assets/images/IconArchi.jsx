@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 const SvgComponent = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" {...props}>
     <title>{"architecture-math-drawing-stationary"}</title>
@@ -21,5 +21,5 @@ const SvgComponent = (props) => (
       {"from the Noun Project"}
     </text>
   </svg>
-)
-export default SvgComponent
+);
+export default SvgComponent;

@@ -13,8 +13,8 @@ type Props = {
 
 const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
   return (
-    <div className="grid place-items-start w-full bg-[#e7dfd9] relative md:rounded-tr-3xl md:rounded-br-3xl">
-      <div className="uppercase text-sm absolute right-4 top-2 underline-offset-4 underline">
+    <div className="relative grid w-full place-items-start bg-[#e7dfd9] md:rounded-br-3xl md:rounded-tr-3xl">
+      <div className="absolute right-4 top-2 text-sm uppercase underline underline-offset-4">
         Testimonials
       </div>
       {images.map((elem, idx) => (
@@ -22,7 +22,7 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
           key={idx}
           className={`${
             idx === activeImage
-              ? "block w-full h-full md:h-[33vh] py-12md:px-20 px-10 text-left"
+              ? "py-12md:px-20 block h-full w-full px-10 text-left md:h-[33vh]"
               : "hidden"
           }`}
         >
@@ -44,16 +44,16 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
           >
             <div className="py-7 text-5xl font-extrabold">{elem.title}</div>
             <div className="py-3 text-2xl font-extrabold">{elem.subtitle}</div>
-            <div className="leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-gray-600">
-              {" "}{" "}
+            <div className="h-60 text-base font-medium italic leading-relaxed tracking-wide text-gray-600 md:h-40">
+              {" "}
               {elem.desc}
             </div>
           </motion.div>
 
-          <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
+          <button className="my-10 rounded-md bg-[#ecae7e] px-4 py-2 uppercase text-white">
             order now
           </button>
-          <div className="absolute md:bottom-1 bottom-10 right-10 md:right-0 w-full flex justify-center items-center">
+          <div className="absolute bottom-10 right-10 flex w-full items-center justify-center md:bottom-1 md:right-0">
             <div
               className="absolute bottom-2 right-10 cursor-pointer"
               onClick={clickPrev}

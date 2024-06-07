@@ -1,4 +1,3 @@
-
 ---
 enable: true
 title: "Bereit für 8zense.com?"

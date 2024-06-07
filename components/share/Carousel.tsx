@@ -11,13 +11,13 @@ export default function ModernCarousel() {
   const imageIndex = Math.abs(idx % images.length);
 
   return (
-    <div className="h-[50vw] min-h-[400px] max-h-[600px] bg-black relative overflow-hidden">
+    <div className="relative h-[50vw] max-h-[600px] min-h-[400px] overflow-hidden bg-black">
       <button
         onClick={() => {
           setPrevIdx(idx);
           setIdx((pv) => pv - 1);
         }}
-        className="bg-black/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 left-0 top-0 bottom-0"
+        className="absolute bottom-0 left-0 top-0 z-10 bg-black/50 p-2 text-white transition-colors hover:bg-black/60"
       >
         <FiChevronLeft />
       </button>
@@ -34,7 +34,7 @@ export default function ModernCarousel() {
             src={images[imageIndex].src}
             alt={images[imageIndex].title}
             style={{ y: "-50%", x: "-50%" }}
-            className="aspect-square max-h-[90%] max-w-[calc(100%_-_80px)] mx-auto bg-black object-cover shadow-2xl absolute left-1/2 top-1/2"
+            className="absolute left-1/2 top-1/2 mx-auto aspect-square max-h-[90%] max-w-[calc(100%_-_80px)] bg-black object-cover shadow-2xl"
           />
         </AnimatePresence>
       </div>
@@ -43,7 +43,7 @@ export default function ModernCarousel() {
           setPrevIdx(idx);
           setIdx((pv) => pv + 1);
         }}
-        className="bg-black/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 right-0 top-0 bottom-0"
+        className="absolute bottom-0 right-0 top-0 z-10 bg-black/50 p-2 text-white transition-colors hover:bg-black/60"
       >
         <FiChevronRight />
       </button>
@@ -56,7 +56,7 @@ export default function ModernCarousel() {
           animate="animate"
           exit="exit"
           key={images[imageIndex].id}
-          className="text-white text-xl md:text-2xl p-2 rounded-lg bg-white/10 backdrop-blur-lg font-semibold shadow-lg absolute z-20 left-10 bottom-4"
+          className="absolute bottom-4 left-10 z-20 rounded-lg bg-white/10 p-2 text-xl font-semibold text-white shadow-lg backdrop-blur-lg md:text-2xl"
         >
           {images[imageIndex].title}
         </motion.span>
@@ -68,7 +68,7 @@ export default function ModernCarousel() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           exit={{ opacity: 0 }}
-          className="absolute inset-0 object-fill z-0"
+          className="absolute inset-0 z-0 object-fill"
           style={{
             backgroundImage: `url(${images[imageIndex].src})`,
             backgroundPosition: "center",

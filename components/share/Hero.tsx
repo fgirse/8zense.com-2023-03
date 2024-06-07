@@ -1,36 +1,35 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 import Animation from "@/components/share/Lotticreator";
-import styles from "@/components/share//Hero.module.css"  
+import styles from "@/components/share//Hero.module.css";
 
 const Hero = () => {
   return (
     <section id="section-Hero" className="">
-    <div  className="relative w-full  h-screen "  >
-      <Image
-        alt="Hero"
-        src="/assets/images/interiore14.jpg"
-        fill
-        sizes="100vw"
-      
-      />
-    <div className=" bg-black/30   flex flex-col justify-between items-center">
-      <h1 className="relative text-2xl top-2 text-zenseWhite font-black  uppercase sm:text-4xl sm:py-12 sm-leading-3  lg:py-6 lg:relative lg:text-zenseWhite lg:text-[4.33rem] lg:leading-9 lg:font-black  lg:uppercase lg:text-left xl:text-[4.66rem] 2xl:text-[7.166rem]">
-        design interiore
-      </h1>
-      <h1 className="relative -top-3 font-black leading-3 text-5xl text-lime-200 uppercase sm:text-8xl sm:mt-2 md:text-8xl>0><sht lg:-mt-3 lg:text-[7.33rem] lg:font-black xl:text-[11.33rem] lg:leading-3">
-        8zenSe.com
-      </h1>
-      <p className="relative  px-3 text-zenseWhite text-center text-[1rem] leading-0 sm:text-4xl lg:text-4xl lg:font-black lg:text-left">
-        Timeless Design rund um den Werkstoff Beton
-      </p>
-      <div className='mx-auto relative top-8  w-60 h-60 sm:py-12 sd:h-72 sm:w-72  md:w-80 md:h-80'>
-      <Animation />
-    </div>
-    </div>
-    </div>
-  </section>
-  )
-}
+      <div className="relative h-screen w-full">
+        <Image
+          alt="Hero"
+          src="/assets/images/interiore14.jpg"
+          fill
+          sizes="100vw"
+        />
+        <div className="flex flex-col items-center justify-between bg-black/30">
+          <h1 className="sm-leading-3 relative mt-36 text-2xl font-black uppercase text-zenseWhite sm:py-12 sm:text-4xl md:text-5xl lg:relative lg:py-6 lg:text-left lg:text-[4.33rem] lg:font-black lg:uppercase lg:leading-9 lg:text-zenseWhite xl:text-[4.66rem] 2xl:text-[7.166rem]">
+            design interiore
+          </h1>
+          <h1 className="relative py-3 text-5xl font-black uppercase leading-3 text-lime-200 sm:mt-2 sm:text-8xl md:-mt-[6vh] md:text-9xl lg:-mt-3 lg:text-[7.33rem] lg:font-black lg:leading-3 xl:text-[11.33rem]">
+            8zenSe.com
+          </h1>
+          <p className="relative px-3 py-2 text-center text-[1.33rem] leading-3 leading-5 text-zenseWhite sm:text-4xl lg:text-left lg:text-4xl lg:font-black">
+            Timeless Design rund um den Werkstoff Beton
+          </p>
+          <div className="sd:h-72 relative top-8 mx-auto h-60 w-60 sm:w-72 sm:py-12 md:h-80 md:w-80">
+            <Animation />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;

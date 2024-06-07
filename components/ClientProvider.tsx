@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { Toaster } from 'react-hot-toast';
-import React from 'react'
+import { Toaster } from "react-hot-toast";
+import React from "react";
 
 export default function ClientProvider() {
   return (
     <>
-    <Toaster position='top-center' />
-  </>
-  )
+      <Toaster position="top-center" />
+    </>
+  );
 }

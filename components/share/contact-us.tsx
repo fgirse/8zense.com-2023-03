@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface FormState {
   name: string;
@@ -10,14 +10,14 @@ interface FormState {
 
 const ContactUs: React.FC = () => {
   const [formState, setFormState] = useState<FormState>({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [errors, setErrors] = useState<FormState>({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,7 +28,7 @@ const ContactUs: React.FC = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
@@ -38,32 +38,32 @@ const ContactUs: React.FC = () => {
 
     try {
       setIsSubmitting(true);
-      const errors = { name: '', email: '', message: '' };
+      const errors = { name: "", email: "", message: "" };
 
-      if (formState.name === '') {
-        errors.name = 'Name is required';
+      if (formState.name === "") {
+        errors.name = "Name is required";
       }
 
-      if (formState.email === '' || !validateEmail(formState.email)) {
-        errors.email = 'Valid email is required';
+      if (formState.email === "" || !validateEmail(formState.email)) {
+        errors.email = "Valid email is required";
       }
 
-      if (formState.message === '') {
-        errors.message = 'Message is required';
+      if (formState.message === "") {
+        errors.message = "Message is required";
       }
 
       setErrors(errors);
 
       if (!errors.name && !errors.email && !errors.message) {
-        await fetch('/api/send', {
-          method: 'POST',
+        await fetch("/api/send", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formState),
         });
-        alert('Email sent successfully');
-        setFormState({ name: '', email: '', message: '' });
+        alert("Email sent successfully");
+        setFormState({ name: "", email: "", message: "" });
       }
     } catch (error) {
       // handle error here
@@ -74,13 +74,13 @@ const ContactUs: React.FC = () => {
 
   return (
     <form
-      className="flex flex-col gap-4 justify-center"
+      className="flex flex-col justify-center gap-4"
       onSubmit={handleSubmit}
     >
       <div className="flex flex-col gap-1">
         <input
           autoComplete="off"
-          className="w-full rounded-md text-slate-700 border-2 border-slate-300 px-2 py-1 outline-purple-500"
+          className="w-full rounded-md border-2 border-slate-300 px-2 py-1 text-slate-700 outline-purple-500"
           type="text"
           name="name"
           value={formState.name}
@@ -93,7 +93,7 @@ const ContactUs: React.FC = () => {
       <div className="flex flex-col gap-1">
         <input
           autoComplete="off"
-          className="w-full  text-slate-700 rounded-md border-2 border-slate-300 px-2 py-1 outline-purple-500"
+          className="w-full rounded-md border-2 border-slate-300 px-2 py-1 text-slate-700 outline-purple-500"
           type="email"
           name="email"
           value={formState.email}
@@ -106,7 +106,7 @@ const ContactUs: React.FC = () => {
       <div className="flex flex-col gap-1">
         <textarea
           autoComplete="off"
-          className="w-full text-slate-700 rounded-md border-2 border-slate-300 px-2 py-1 outline-purple-500"
+          className="w-full rounded-md border-2 border-slate-300 px-2 py-1 text-slate-700 outline-purple-500"
           name="message"
           value={formState.message}
           onChange={handleChange}
@@ -120,10 +120,10 @@ const ContactUs: React.FC = () => {
 
       <button
         disabled={isSubmitting}
-        className="rounded-md bg-zenseSignal22 text-white px-2 py-1 block"
+        className="block rounded-md bg-zenseSignal22 px-2 py-1 text-white"
         type="submit"
       >
-        {isSubmitting ? 'Submitting...' : 'Submit'}
+        {isSubmitting ? "Submitting..." : "Submit"}
       </button>
     </form>
   );

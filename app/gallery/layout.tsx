@@ -5,15 +5,16 @@ import ScrollToTop from "@/components/BackToTop/ScrollToTop";
 export default function GalleryLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
       <Header />
-      <main className="min-h-screen grid place-content-center bg-blue-400">{children}</main>
-  <ScrollToTop/>
+      <main className="grid min-h-screen place-content-center bg-blue-400">
+        {children}
+      </main>
+      <ScrollToTop />
       <Footer />
-      
     </>
-  )
+  );
 }

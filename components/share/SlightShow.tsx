@@ -1,30 +1,30 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import { images } from"@/constants/imageData"
+import { images } from "@/constants/imageData";
 
 const variants = {
   enter: (direction: number) => {
     return {
       x: direction > 0 ? 1000 : -1000,
-      opacity: 0
+      opacity: 0,
     };
   },
   center: {
     zIndex: 1,
     x: 0,
-    opacity: 1
+    opacity: 1,
   },
   exit: (direction: number) => {
     return {
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
-      opacity: 0
+      opacity: 0,
     };
-  }
+  },
 };
 
 /**
@@ -38,7 +38,7 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
- const SlightShow = () => {
+const SlightShow = () => {
   const [[page, direction], setPage] = useState([0, 0]);
 
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
@@ -64,7 +64,7 @@ const swipePower = (offset: number, velocity: number) => {
           exit="exit"
           transition={{
             x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
+            opacity: { duration: 0.2 },
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -89,4 +89,4 @@ const swipePower = (offset: number, velocity: number) => {
     </>
   );
 };
-export default SlightShow
+export default SlightShow;

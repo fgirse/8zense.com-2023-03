@@ -1,4 +1,3 @@
-
 import Footer from "@/components/share/Footer";
 
 import Header from "@/components/share/Header";
@@ -11,21 +10,13 @@ import styles from "./styles.module.css";
 
 import { HeadManagerContext } from "next/dist/shared/lib/head-manager-context.shared-runtime";
 
-
 export default function HomeLayout({
-
   children,
-
 }: {
-
   children: React.ReactNode;
-
 }) {
-
   return (
-
     <>
-
       <Header />
 
       <main className={styles.main}>{children}</main>
@@ -35,11 +26,6 @@ export default function HomeLayout({
       <Newsletter />
 
       <Footer />
-
     </>
-
   );
-
 }
-
-
