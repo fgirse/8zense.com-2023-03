@@ -20,7 +20,7 @@ const Hero = () => {
           <h1 className="relative py-3 text-5xl font-black uppercase leading-3 text-lime-200 sm:mt-2 sm:text-8xl md:-mt-[6vh] md:text-9xl lg:-mt-3 lg:text-[7.33rem] lg:font-black lg:leading-3 xl:text-[11.33rem]">
             8zenSe.com
           </h1>
-          <p className="relative px-3 py-2 text-center text-[1.33rem] leading-3 leading-5 text-zenseWhite sm:text-4xl lg:text-left lg:text-4xl lg:font-black">
+          <p className="relative px-3 py-2 text-center text-[1.33rem leading-5 text-zenseWhite sm:text-4xl lg:text-left lg:text-4xl lg:font-black">
             Timeless Design rund um den Werkstoff Beton
           </p>
           <div className="sd:h-72 relative top-8 mx-auto h-60 w-60 sm:w-72 sm:py-12 md:h-80 md:w-80">
